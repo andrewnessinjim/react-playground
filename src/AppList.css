@@ -1,0 +1,30 @@
+.app-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    list-style: none;
+    text-align: left;
+}
+
+.app-list li a {
+    padding: 10px 10px;
+}
+
+.app-list li a:visited, .app-list li a {
+    color: #eee;
+    text-decoration: none;
+    transition: 150ms all ease-in;
+    width: 100%;
+    display: inline-block;
+}
+
+.app-list li:hover a {
+    color: #282c34;
+}
+
+.app-list li:hover {
+    cursor: pointer;
+    background: #eee;
+    border-radius: 5px;
+}
