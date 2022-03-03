@@ -7,10 +7,7 @@ export default function ColorCounter() {
     const [countColor, setCountColor] = useState("");
     
     useEffect(() => {
-        const color1 = randomColor();
-        const color2 = randomColor();
-        //setCountColor(`linear-gradient(${color1},${color2})`);
-        setCountColor(color1);
+        setCountColor(randomColor);
     }, [count]); //Missing dependency array would cause an infinite loop
 
     return (
