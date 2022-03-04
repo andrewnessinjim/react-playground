@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./colorCounter.css";
 import randomColor from "randomcolor";
 
 export default function ColorCounter() {
     const [count, setCount] = useState(0);
     const [countColor, setCountColor] = useState("");
-    
+    const counterRangeRef = useRef();
+
     useEffect(() => {
         setCountColor(randomColor);
-    }, [count]); //Missing dependency array would cause an infinite loop
+        counterRangeRef.current.focus();
+    }, [count]); //Missing dependency array would cause an infinite loop, empty array would run the effect only on first render
 
     return (
         <div className="color-counter-container">
@@ -17,6 +19,7 @@ export default function ColorCounter() {
                 <button onClick={() => setCount(prevCount => --prevCount)}>-</button>
                 <button onClick={() => setCount(prevCount => ++prevCount)}>+</button>
             </div>
+            <input ref={counterRangeRef} type="range" onChange={e => setCount(e.target.value)} value={count}/>
         </div>
     )
 }
