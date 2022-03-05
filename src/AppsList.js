@@ -6,6 +6,9 @@ export default function AppList() {
             <li>
                 <Link to="/colorCounter">Color Counter</Link>
             </li>
+            <li>
+                <Link to="/mousePosition">Mouse Position (HOC)</Link>
+            </li>
         </ol>
     )
 }
