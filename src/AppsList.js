@@ -9,6 +9,10 @@ export default function AppList() {
             <li>
                 <Link to="/mousePosition">Mouse Position (HOC)</Link>
             </li>
+
+            <li>
+                <Link to="/renderPropsText">Text Styles (render props)</Link>
+            </li>
         </ol>
     )
 }

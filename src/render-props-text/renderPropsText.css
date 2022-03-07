@@ -1,0 +1,15 @@
+@keyframes slidein {
+    from {
+        margin-left: 0px;
+    }
+
+    to {
+        margin-left: 300px;
+    }
+}
+
+.size-animate {
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}

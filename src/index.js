@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ColorCounter from './color-counter/ColorCounter';
 import { MouseTracker } from './mouse-position-hoc/mousePosition';
+import RenderPropsText from './render-props-text/renderPropsText';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}/>
         <Route path="/colorCounter" element={<ColorCounter/>}/>
         <Route path="/mousePosition" element={<MouseTracker/>}/>
+        <Route path="/renderPropsText" element={<RenderPropsText/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
